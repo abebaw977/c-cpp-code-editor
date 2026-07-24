@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-brand">🌤️ Weather Dashboard</div>
+            <div class="nav-menu">
+                <button class="nav-btn active" data-view="current">Current Weather</button>
+                <button class="nav-btn" data-view="forecast">5-Day Forecast</button>
+                <button class="nav-btn" data-view="favorites">Favorites</button>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        class="search-input" 
+                        placeholder="Search for a city..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" class="search-btn">🔍 Search</button>
+                </div>
+                <div id="searchSuggestions" class="search-suggestions"></div>
+            </div>
+
+            <!-- Current Weather View -->
+            <div id="currentView" class="view-section active">
+                <div id="currentWeather" class="weather-container hidden">
+                    <!-- Current weather content loaded here -->
+                </div>
+                <div id="loadingCurrent" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Loading weather data...</p>
+                </div>
+                <div id="errorCurrent" class="error-state hidden"></div>
+            </div>
+
+            <!-- Forecast View -->
+            <div id="forecastView" class="view-section hidden">
+                <div id="forecastWeather" class="forecast-container hidden">
+                    <!-- Forecast content loaded here -->
+                </div>
+                <div id="loadingForecast" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Loading forecast data...</p>
+                </div>
+                <div id="errorForecast" class="error-state hidden"></div>
+            </div>
+
+            <!-- Favorites View -->
+            <div id="favoritesView" class="view-section hidden">
+                <div id="favoritesList" class="favorites-list">
+                    <p class="empty-state">No favorites yet. Add cities from the search!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+</body>
+</html>
