@@ -1,0 +1,148 @@
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .header-actions {
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile: Less than 768px */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: 120px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        overflow-x: auto;
+        flex-direction: row;
+    }
+    
+    .sidebar-header {
+        min-width: 100px;
+        border-right: 1px solid var(--border-color);
+        border-bottom: none;
+    }
+    
+    .file-tree {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        padding: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .file-tree-item {
+        white-space: nowrap;
+        min-width: 80px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: space-around;
+        gap: 3px;
+    }
+    
+    .btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .btn span {
+        display: none;
+    }
+    
+    .editor-area {
+        height: calc(100vh - 180px);
+    }
+    
+    .output-panel {
+        height: 120px;
+    }
+    
+    .tab {
+        min-width: 80px;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .CodeMirror {
+        font-size: 12px !important;
+    }
+}
+
+/* Small phones: Less than 480px */
+@media (max-width: 480px) {
+    .sidebar {
+        height: 100px;
+    }
+    
+    .header-actions {
+        gap: 2px;
+    }
+    
+    .btn {
+        padding: 4px 8px;
+        font-size: 0.65rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .CodeMirror {
+        font-size: 11px !important;
+    }
+    
+    .output-area {
+        font-size: 11px;
+        padding: 8px;
+    }
+    
+    .output-input {
+        padding: 6px 10px;
+    }
+    
+    #programInput {
+        padding: 6px;
+        font-size: 12px;
+    }
+    
+    .modal-content {
+        min-width: 90vw;
+        padding: 15px;
+    }
+    
+    .tab {
+        min-width: 60px;
+        padding: 6px 8px;
+        font-size: 0.65rem;
+    }
+    
+    .file-tree-item {
+        min-width: 60px;
+        padding: 6px 10px;
+    }
+}
